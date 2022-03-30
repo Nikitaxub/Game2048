@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F8559D8027F252FF00B438C2 /* Game2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8559D7F27F252FF00B438C2 /* Game2048App.swift */; };
-		F8559D8227F252FF00B438C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8559D8127F252FF00B438C2 /* ContentView.swift */; };
+		F8559D8227F252FF00B438C2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8559D8127F252FF00B438C2 /* GameView.swift */; };
 		F8559D8427F2530000B438C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8559D8327F2530000B438C2 /* Assets.xcassets */; };
 		F8559D8727F2530000B438C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8559D8627F2530000B438C2 /* Preview Assets.xcassets */; };
 		F8559D9127F2530000B438C2 /* Game2048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8559D9027F2530000B438C2 /* Game2048Tests.swift */; };
 		F8559D9B27F2530000B438C2 /* Game2048UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8559D9A27F2530000B438C2 /* Game2048UITests.swift */; };
 		F8559D9D27F2530000B438C2 /* Game2048UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8559D9C27F2530000B438C2 /* Game2048UITestsLaunchTests.swift */; };
+		F8559DAC27F2534000B438C2 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8559DAB27F2534000B438C2 /* GameViewModel.swift */; };
+		F8559DAF27F25E0D00B438C2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8559DAE27F25E0D00B438C2 /* Game.swift */; };
+		F898B17027F4805C0037CE1A /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898B16F27F4805C0037CE1A /* CellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		F8559D7C27F252FF00B438C2 /* Game2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8559D7F27F252FF00B438C2 /* Game2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048App.swift; sourceTree = "<group>"; };
-		F8559D8127F252FF00B438C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8559D8127F252FF00B438C2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		F8559D8327F2530000B438C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8559D8627F2530000B438C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F8559D8C27F2530000B438C2 /* Game2048Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Game2048Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,9 @@
 		F8559D9627F2530000B438C2 /* Game2048UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Game2048UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8559D9A27F2530000B438C2 /* Game2048UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048UITests.swift; sourceTree = "<group>"; };
 		F8559D9C27F2530000B438C2 /* Game2048UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8559DAB27F2534000B438C2 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		F8559DAE27F25E0D00B438C2 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F898B16F27F4805C0037CE1A /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F8559D7F27F252FF00B438C2 /* Game2048App.swift */,
-				F8559D8127F252FF00B438C2 /* ContentView.swift */,
+				F8559DAD27F254D000B438C2 /* Game */,
 				F8559D8327F2530000B438C2 /* Assets.xcassets */,
 				F8559D8527F2530000B438C2 /* Preview Content */,
 			);
@@ -125,6 +131,17 @@
 				F8559D9C27F2530000B438C2 /* Game2048UITestsLaunchTests.swift */,
 			);
 			path = Game2048UITests;
+			sourceTree = "<group>";
+		};
+		F8559DAD27F254D000B438C2 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F898B16F27F4805C0037CE1A /* CellView.swift */,
+				F8559D8127F252FF00B438C2 /* GameView.swift */,
+				F8559DAB27F2534000B438C2 /* GameViewModel.swift */,
+				F8559DAE27F25E0D00B438C2 /* Game.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8559D8227F252FF00B438C2 /* ContentView.swift in Sources */,
+				F8559DAC27F2534000B438C2 /* GameViewModel.swift in Sources */,
+				F898B17027F4805C0037CE1A /* CellView.swift in Sources */,
+				F8559D8227F252FF00B438C2 /* GameView.swift in Sources */,
 				F8559D8027F252FF00B438C2 /* Game2048App.swift in Sources */,
+				F8559DAF27F25E0D00B438C2 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Game2048/Preview Content\"";
@@ -433,8 +454,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xubuntus.Game2048;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xubuntus.Game2048New;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Game2048/Preview Content\"";
@@ -463,8 +486,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xubuntus.Game2048;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xubuntus.Game2048New;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
